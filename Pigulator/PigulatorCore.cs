@@ -8,8 +8,8 @@ namespace Pigulator
 {
     public class PigulatorCore
     {
-        private static double wholePig = 1450;
-        private static double halfPig = 800;
+        private readonly static double wholePig = 1450;
+        private readonly static double halfPig = 800;
 
         public static double WPigs(double pigs, double customer) => (pigs * wholePig)/customer;
         public static double HPigs(double pigs, double customer) => (pigs * halfPig) / customer;

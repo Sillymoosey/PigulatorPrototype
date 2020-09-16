@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.SignalR;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -8,12 +9,21 @@ namespace Pigulator.Models
 {
     public class Input
     {
-        [Required(ErrorMessage = "Please enter the number of customers.")]
+        
+
+        [Range(1, 5)]
+        [Required]
         public int Customers { get; set; }
-        [Required(ErrorMessage = "Enter the number of pigs that you want.")]
-        public int Pigs { get; set; }
-        [Required(ErrorMessage = "Please select whole or half.")]
+
+
+
+        [Range(1, 5)]
+        [Required]
+        public int Amount { get; set; }        
+        
+        
+        
+        [Required]
         public bool WholeorHalf { get; set; }
-        public int Amount { get; set; }
     }
 }
