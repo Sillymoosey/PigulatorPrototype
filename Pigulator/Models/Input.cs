@@ -10,17 +10,14 @@ namespace Pigulator.Models
     public class Input
     {
         
-
         [Range(1, 5)]
         [Required]
         public int Customers { get; set; }
 
 
-
         [Range(1, 5)]
         [Required]
         public int Amount { get; set; }        
-        
         
         
         [Required]

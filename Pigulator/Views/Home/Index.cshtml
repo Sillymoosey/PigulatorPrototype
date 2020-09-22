@@ -21,13 +21,32 @@
             <img src="~/css/pigs.jpg" alt="pigs" style="min-width:450px">
         </picture>
         <div asp-validation-summary="All"></div>
+        @*
+             Lookup how to make buttons and inputs visable and invisible absed off of selected options on page. 
+            This is key to getting the page to respond without haveing to reload or change views.
+         *@
         <div class="form-group">
-            <label asp-for="Customers">Number of Customers</label>
-            <input asp-for="Customers"  />
+            <label>How many Customers</label>
+            <select asp-for="Customers" class="form-control">
+                <option value="">Choose an Amount</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+                <option value="4">Four</option>
+                <option value="5">Five</option>
+            </select>
         </div>
         <div class="form-group">
-            <label asp-for="Amount">How many pigs</label>
-            <input asp-for="Amount" />
+            <label>How many pigs</label>
+            <select asp-for="Amount" class="form-control">
+                <option value="">Choose an Amount</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+                <option value="4">Four</option>
+                <option value="5">Five</option>
+            </select>
+            
         </div>
         <div class="form-group">
             <label>Whole or half pig</label>
