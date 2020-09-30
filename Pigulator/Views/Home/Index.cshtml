@@ -4,6 +4,10 @@
 @{
     ViewData["Title"] = "Home Page";
 }
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/js/site.js"></script>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,12 +24,10 @@
             <source srcset="~/css/pigs.jpg">
             <img src="~/css/pigs.jpg" alt="pigs" style="min-width:450px">
         </picture>
-        <div asp-validation-summary="All"></div>
-        @*
-             Lookup how to make buttons and inputs visable and invisible absed off of selected options on page. 
-            This is key to getting the page to respond without haveing to reload or change views.
-         *@
+
         <div class="form-group">
+
+
             <label>How many Customers</label>
             <select asp-for="Customers" class="form-control">
                 <option value="">Choose an Amount</option>
@@ -36,6 +38,15 @@
                 <option value="5">Five</option>
             </select>
         </div>
+
+        @**@
+
+        <div class="Customer_Intputs_Div">
+            
+        </div>
+
+        <button type="button" class="Button_Add">Add</button>
+        <button type="button" class="Button_Remove">Remove</button>
         <div class="form-group">
             <label>How many pigs</label>
             <select asp-for="Amount" class="form-control">
@@ -46,7 +57,7 @@
                 <option value="4">Four</option>
                 <option value="5">Five</option>
             </select>
-            
+
         </div>
         <div class="form-group">
             <label>Whole or half pig</label>

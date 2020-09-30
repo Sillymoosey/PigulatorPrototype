@@ -10,17 +10,17 @@ namespace Pigulator.Models
     public class Input
     {
         
-        [Range(1, 5)]
-        [Required]
+        
+        //[Required(ErrorMessage = "Please select how many people are participating")]
         public int Customers { get; set; }
 
 
-        [Range(1, 5)]
-        [Required]
+        
+        //[Required(ErrorMessage = "Please select an amount")]
         public int Amount { get; set; }        
         
         
-        [Required]
+        //[Required(ErrorMessage = "Please Select which type of pork you are buy")]
         public bool WholeorHalf { get; set; }
     }
 }

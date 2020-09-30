@@ -1,5 +1,6 @@
 ﻿
-@model Pigulator.Models.Input
+@model Input
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,15 +8,16 @@
 </head>
 <body>
     <div>
+        
         @if (Model.WholeorHalf == true)
         {
-            @PigulatorCore.WPigs(Model.Amount, Model.Customers)
+            @PigulatorCore.WPigs(Model.Amount, Model.Customers, 1450)
             <div>this is the price of a whole pig with TO BE IMPLEMENTED: A list of all customers involved in one order, Customers being able to set the percentage they will pay.</div>
-        
+
         }
         else
         {
-            @PigulatorCore.HPigs(Model.Amount, Model.Customers)
+            @PigulatorCore.HPigs(Model.Amount, Model.Customers, 800)
             <div>this is the price of a half pig TO BE IMPLEMENTED: A list of all customers involved in one order, Customers being able to set the percentage they will pay.</div>
         }
     </div>

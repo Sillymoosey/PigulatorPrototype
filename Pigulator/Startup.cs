@@ -50,6 +50,7 @@ namespace Pigulator
             {
                 endpoints.MapDefaultControllerRoute();
             });
+            SeedData.EnsurePopulated(app);
         }
     }
 }
