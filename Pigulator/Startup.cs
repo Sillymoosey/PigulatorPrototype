@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using Pigulator.Models;
 using Pigulator.Data;
 
+
 namespace Pigulator
 {
     public class Startup

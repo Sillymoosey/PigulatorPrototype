@@ -11,6 +11,7 @@ namespace Pigulator.Controllers
 {
     public class HomeController : Controller
     {
+
         [HttpGet]
         public IActionResult Index()
         {
@@ -21,6 +22,7 @@ namespace Pigulator.Controllers
         {
             if (ModelState.IsValid)
             {
+               
                 return View("IndexOutput", input);
             }
             else

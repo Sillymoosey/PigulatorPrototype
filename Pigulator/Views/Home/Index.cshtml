@@ -1,6 +1,8 @@
 ﻿
 @model Pigulator.Models.Input
 
+
+
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -28,7 +30,7 @@
         <div class="form-group">
 
 
-            <label>How many Customers</label>
+
             <select asp-for="Customers" class="form-control">
                 <option value="">Choose an Amount</option>
                 <option value="1">One</option>
@@ -39,14 +41,14 @@
             </select>
         </div>
 
-        @**@
 
+        <label>How many Customers</label>
         <div class="Customer_Intputs_Div">
-            
+            <input type="text" class="form-control" name="Customers[]" placeholder="Enter a Name" />
         </div>
-
         <button type="button" class="Button_Add">Add</button>
         <button type="button" class="Button_Remove">Remove</button>
+
         <div class="form-group">
             <label>How many pigs</label>
             <select asp-for="Amount" class="form-control">
@@ -67,6 +69,11 @@
                 <option value="false">Half Pig</option>
             </select>
         </div>
+        @**@
+
+
+
+
         <button type="Submit" class="btn btn-primary">Calculate</button>
     </form>
 </body>
