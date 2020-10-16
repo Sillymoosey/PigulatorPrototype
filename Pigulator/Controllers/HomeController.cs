@@ -7,16 +7,17 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Pigulator.Models;
 
+
 namespace Pigulator.Controllers
 {
     public class HomeController : Controller
     {
-
         [HttpGet]
         public IActionResult Index()
         {
+           
             return View();
-        }
+        }        
         [HttpPost]
         public IActionResult Index(Input input)
         {
@@ -30,6 +31,7 @@ namespace Pigulator.Controllers
                 return View();
             }
         }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

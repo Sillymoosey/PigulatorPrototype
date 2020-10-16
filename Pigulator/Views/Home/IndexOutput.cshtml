@@ -1,25 +1,63 @@
 ﻿
-@model Input
+@model Pigulator.Models.Input
 
+@{ 
+    decimal wholeCost = Model.Amount * Model.whole;
+    decimal halfCost = Model.Amount * Model.half;
+}
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=width-device" />
     <title>Pigulator Calculated</title>
 </head>
 <body>
     <div>
 
-
         @if (Model.WholeorHalf == true)
         {
-            @PigulatorCore.WPigs(Model.Amount, Model.Customers, Model.whole)
-            <div>this is the price of a whole pig with TO BE IMPLEMENTED: A list of all customers involved in one order, Customers being able to set the percentage they will pay.</div>
+
+            <table>
+                <thead>
+                    <tr><th>|Main Buyer|</th><th>Total Cost|</th><th>Number of Buyers|</th><th>Number of Whole Pigs|</th><th>Price Per-Customer|</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>@Model.Name</td>
+
+                        <td>@wholeCost.ToString("c")</td>
+
+                        <td>@Model.Customers</td>
+
+                        <td>@Model.Amount</td>
+
+                        <td>@PigulatorCore.WPigs(Model.Amount, Model.Customers, Model.whole).ToString("c")</td>
+                    </tr>
+                </tbody>
+            </table>
 
         }
         else
         {
-            @PigulatorCore.HPigs(Model.Amount, Model.Customers, Model.half)
-            <div>this is the price of a half pig TO BE IMPLEMENTED: A list of all customers involved in one order, Customers being able to set the percentage they will pay.</div>
+           
+            <table>
+                <thead>
+                    <tr><th>|Main Buyer|</th><th>Total Cost|</th><th>Number of Buyers|</th><th>Number of Half Pigs|</th><th>Price Per-Customer|</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>@Model.Name</td>
+
+                        <td>@halfCost.ToString("c")</td>
+
+                        <td>@Model.Customers</td>
+
+                        <td>@Model.Amount</td>
+
+                        <td>@PigulatorCore.HPigs(Model.Amount, Model.Customers, Model.half).ToString("c")</td>
+                    </tr>
+                </tbody>
+            </table>
         }
     </div>
 </body>
