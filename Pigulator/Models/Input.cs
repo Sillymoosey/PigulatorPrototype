@@ -7,8 +7,6 @@ namespace Pigulator.Models
 {
     public class Input
     {
-
-
         public Input()
         {
             whole = 1450.00M;
