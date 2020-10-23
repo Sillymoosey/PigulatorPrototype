@@ -12,3 +12,12 @@ This is the first stage concept, and far from what the finished product will loo
 ---
 
 ## Testing new CSS and different reactive settings
+![Ipad](https://github.com/Sillymoosey/PigulatorPrototype/blob/master/Pictures/Ipad.PNG)
+
+---
+
+![iphone](https://github.com/Sillymoosey/PigulatorPrototype/blob/master/Pictures/Iphone.PNG)
+
+---
+
+![sideways](https://github.com/Sillymoosey/PigulatorPrototype/blob/master/Pictures/Sideways.PNG)
